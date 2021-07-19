@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="1234.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="1110.0" layoutY="280.0" mnemonicParsing="false" onAction="#exitButtonHandler" prefHeight="25.0" prefWidth="100.0" textAlignment="CENTER" />
+      <Label fx:id="exitButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1101.0" layoutY="284.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="exitButtonLabel" textAlignment="CENTER" />
+      <TabPane fx:id="mainScreenTabPane" layoutX="14.0" layoutY="29.0" prefHeight="242.0" prefWidth="1205.0" style="-fx-border-color: #d3d3d3;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="CustomersTabPane" text="Customers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1203.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="337.0" layoutY="176.0" mnemonicParsing="false" onAction="#addCustomerButtonHandler" prefHeight="25.0" prefWidth="145.0" textAlignment="CENTER" />
+                        <Label fx:id="addCustomerButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="351.0" layoutY="180.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="addCustomerButtonLabel" textAlignment="CENTER" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="529.0" layoutY="175.0" mnemonicParsing="false" onAction="#updateCustomerButtonHandler" prefHeight="25.0" prefWidth="145.0" textAlignment="CENTER" />
+                        <Label fx:id="updateCustomerButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="543.0" layoutY="179.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="updateCustomerButtonLabel" textAlignment="CENTER" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="716.0" layoutY="175.0" mnemonicParsing="false" onAction="#deleteCustomerButtonHandler" prefHeight="25.0" prefWidth="145.0" textAlignment="CENTER" />
+                        <Label fx:id="deleteCustomerButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="730.0" layoutY="180.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="deleteCustomerButtonLabel" textAlignment="CENTER" />
+                        <TableView fx:id="customerTableview" layoutX="255.0" prefHeight="170.0" prefWidth="693.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="AppointmentsTabPane" text="Appointments">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="343.0" layoutY="174.0" mnemonicParsing="false" onAction="#addAppointmentButtonHandler" prefHeight="25.0" prefWidth="145.0" textAlignment="CENTER" />
+                        <Label fx:id="addAppointmentButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="357.0" layoutY="178.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="addAppointmentButtonLabel" textAlignment="CENTER" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="174.0" mnemonicParsing="false" onAction="#updateAppointmentButtonHandler" prefHeight="25.0" prefWidth="145.0" textAlignment="CENTER" />
+                        <Label fx:id="updateAppointmentButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="549.0" layoutY="178.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="updateAppointmentButtonLabel" textAlignment="CENTER" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="722.0" layoutY="174.0" mnemonicParsing="false" onAction="#deleteAppointmentButtonHandler" prefHeight="25.0" prefWidth="145.0" textAlignment="CENTER" />
+                        <Label fx:id="deleteAppointmentButtonLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="736.0" layoutY="178.0" mouseTransparent="true" prefHeight="17.0" prefWidth="117.0" text="deleteAppointmentButtonLabel" textAlignment="CENTER" />
+                        <TableView fx:id="appointmentTableview" layoutX="-1.0" prefHeight="170.0" prefWidth="1205.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="monthlyViewTabPane" text="Monthly View">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentMonthTableview" layoutY="-2.0" prefHeight="170.0" prefWidth="1205.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="weeklyViewTabPane" text="Weekly View">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentWeekTableview" layoutY="-2.0" prefHeight="170.0" prefWidth="1205.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="upcomingAppTabPane" text="Upcoming Appointments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentUpAppTableview" layoutY="-2.0" prefHeight="170.0" prefWidth="1205.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="reportsTabPane" text="Reports">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="56.0" layoutY="14.0" prefHeight="133.0" prefWidth="1091.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="61.142860412597656" minHeight="10.0" prefHeight="24.42856706891741" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="61.142860412597656" minHeight="10.0" prefHeight="22.14286150251116" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="67.42859322684151" minHeight="10.0" prefHeight="34.14286586216518" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="49.28571428571429" minHeight="10.0" prefHeight="26.71427699497768" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="49.28571428571429" minHeight="10.0" prefHeight="18.42857142857143" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="28.714272635323653" minHeight="10.0" prefHeight="17.285714285714278" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#customersByTypeMonthReportButtonHandler" prefHeight="25.0" prefWidth="250.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#contactAppointmentsReportButtonHandler" prefHeight="25.0" prefWidth="250.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#customReportButtonHandler" prefHeight="25.0" prefWidth="250.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#userLoginReportButtonHandler" prefHeight="25.0" prefWidth="250.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label fx:id="userLoginReportLabel" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="250.0" text="userLoginReportLabel" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label fx:id="customersByTypeMonthReportLabel" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="250.0" text="customersByTypeMonthReportLabel" textAlignment="CENTER" GridPane.rowIndex="1" />
+                              <Label fx:id="customReportLabel" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="250.0" text="customReportLabel" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="contactAppointmentsReportLabel" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="250.0" text="contactAppointmentsReportLabel" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="reportLocationLabel" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="250.0" text="reportLocationLabel" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="250.0" text="\\root\src\reports" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                              <Label fx:id="generateReportLabel1" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="200.0" text="generateReportLabel1" textAlignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="generateReportLabel2" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="200.0" text="generateReportLabel2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="generateReportLabel3" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="200.0" text="generateReportLabel3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label fx:id="generateReportLabel4" alignment="CENTER" contentDisplay="CENTER" mouseTransparent="true" prefHeight="17.0" prefWidth="200.0" text="generateReportLabel4" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

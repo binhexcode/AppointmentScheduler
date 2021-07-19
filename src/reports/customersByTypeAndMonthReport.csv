@@ -1,0 +1,5 @@
+Customer_ID,Customer_Name,Address,Postal_Code,Phone,Create_Date,Created_By,Last_Update,Last_Updated_By,Division_ID
+1,Daddy Warbucks,1919 Boardwalk,01291,869-908-1875,2020-12-19 18:09:45,script,2020-12-19 18:09:45,script,29
+2,Lady McAnderson,2 Wonder Way,AF19B,11-445-910-2135,2020-12-19 18:09:45,script,2020-12-19 18:09:45,script,103
+3,Dudley Do-Right,48 Horse Manor ,28198,874-916-2671,2020-12-19 18:09:45,script,2020-12-19 18:09:45,script,60
+5,JaneDoe,123,123,123,2021-01-18 15:54:47,script,2021-01-18 15:54:47,script,61

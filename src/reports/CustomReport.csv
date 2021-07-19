@@ -1,0 +1,3 @@
+Appointment_ID,Title,Type,Customer_Name,Division,Country
+19,TestTitle1,TestType1,TestCustomer1,Alberta,Canada
+20,TestTitle2,TestType2,TestCustomer2,Alabama,U.S
